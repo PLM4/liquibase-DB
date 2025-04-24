@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="Criando pessoa" author="pedrolucas">
+        <createTable tableName="pessoa">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nome" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sobrenome" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="altura" type="varchar(50)"/>
+        </createTable>
+            <addForeignKeyConstraint
+                    baseTableName="contato"
+                    baseColumnNames="id_contato"
+                    constraintName="fk_contato_pessoa"
+                    referencedTableName="contato"
+                    referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

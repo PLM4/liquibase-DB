@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="Inserindo tupla na tabela contato" author="pedrolucas">
+        <insert tableName="contato">
+            <column name="contato_id" value="1"/>
+            <column name="nome" value="Lucas"/>
+            <column name="telefone" value="83986624367"/>
+            <column name="emalil" value="melo.moraes@academico.ifpb.edu.br"/>
+            <column name="endereco" value="rua rui barbosa"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
